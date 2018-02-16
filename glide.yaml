@@ -1,0 +1,7 @@
+package: github.com/jimmy-go/degops
+import: []
+testImport:
+- package: github.com/stretchr/testify
+  version: v1.2.0
+  subpackages:
+  - assert
