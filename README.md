@@ -24,7 +24,7 @@ update.sh travis        # Overwrite .travis.yml file.
 ### Oneliner copy & exec:
 
 ```
-curl -o update.sh https://raw.githubusercontent.com/jimmy-go/degops/master/update.sh | chmod +x update.sh | ./update.sh all
+curl -o update.sh https://raw.githubusercontent.com/jimmy-go/degops/master/update.sh && chmod +x update.sh && ./update.sh all
 ```
 
 ### License:
