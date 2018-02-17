@@ -1,6 +1,6 @@
 
 help:
-	@echo "Go CI 0.0.3:"
+	@echo "Go CI 0.0.4:"
 	@echo "Available commands:"
 	@echo "\tmake install			Install dependencies."
 	@echo "\tmake run			Run default command."
@@ -23,7 +23,7 @@ test:
 
 coverage:
 	@echo "Make: Coverage"
-	./scripts/coverage.sh
+	./scripts/cover.sh
 
 clean:
 	@echo "Make: Clean"
@@ -43,7 +43,7 @@ container-test:
 
 container-coverage:
 	@echo "Make: Coverage"
-	./container/coverage.sh
+	./container/cover.sh
 
 container-clean:
 	@echo "Make: Clean"

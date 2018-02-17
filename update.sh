@@ -1,5 +1,5 @@
 #!/bin/bash
-## DeGOps: 0.0.3
+## DeGOps: 0.0.4
 # Updates DeGOps files on current dir.
 set -o errexit
 set -o nounset
@@ -47,7 +47,7 @@ copyscripts() {
 	getscript "install"
 	getscript "test"
 	getscript "run"
-	getscript "coverage"
+	getscript "cover"
 	getscript "clean"
 }
 
