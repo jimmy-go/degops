@@ -16,6 +16,11 @@ getdocker() {
 	curl -o Dockerfile https://raw.githubusercontent.com/jimmy-go/degops/develop/Dockerfile
 }
 
+gettravis() {
+    echo "  Load remote .travis.yml"
+	curl -o .travis.yml https://raw.githubusercontent.com/jimmy-go/degops/develop/.travis.yml
+}
+
 getupdate() {
     echo "  Load remote update script"
 	curl -o update.sh https://raw.githubusercontent.com/jimmy-go/degops/develop/update.sh
@@ -52,6 +57,10 @@ case "$1" in
 		getmake
 		copyscripts
 		getdocker
+		gettravis
+		;;
+	update)
+		getupdate
 		;;
 	makefile)
 		getmake
@@ -62,11 +71,11 @@ case "$1" in
 	container)
 		getdocker
 		;;
-	update)
-		getupdate
+	travis)
+		gettravis
 		;;
 	*)
-		echo $"Usage: $0 {all|scripts|makefile|container|update}"
+		echo $"Usage: $0 {all|scripts|makefile|container|update|travis}"
 		exit 1
 esac
 
