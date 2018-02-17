@@ -7,14 +7,17 @@ set -o nounset
 ## Validate action
 
 getmake() {
+    echo "  Load remote Makefile"
 	curl -o Makefile https://raw.githubusercontent.com/jimmy-go/degops/develop/Makefile
 }
 
 getdocker() {
+    echo "  Load remote Dockerfile"
 	curl -o Dockerfile https://raw.githubusercontent.com/jimmy-go/degops/develop/Dockerfile
 }
 
 getupdate() {
+    echo "  Load remote update script"
 	curl -o update.sh https://raw.githubusercontent.com/jimmy-go/degops/develop/update.sh
 }
 
@@ -29,6 +32,7 @@ getscript() {
 	fi
 
 	# Load remote file.
+    echo "  Load remote script: $FILE"
 	curl -o scripts/${FILE}.sh https://raw.githubusercontent.com/jimmy-go/degops/develop/scripts/${FILE}.sh
     chmod +x scripts/${FILE}.sh
 }
@@ -44,6 +48,7 @@ copyscripts() {
 
 case "$1" in
 	all)
+		getupdate
 		getmake
 		copyscripts
 		getdocker
