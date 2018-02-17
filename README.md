@@ -6,6 +6,18 @@
 [![GoDoc](http://godoc.org/github.com/jimmy-go/degops?status.png)](http://godoc.org/github.com/jimmy-go/degops)
 [![Coverage Status](https://coveralls.io/repos/github/jimmy-go/degops/badge.svg?branch=master)](https://coveralls.io/github/jimmy-go/degops?branch=master)
 
+
+### Usage:
+
+_update.sh is the secret for all of this_
+
+```
+update.sh all
+update.sh scripts
+update.sh makefile
+update.sh container
+```
+
 ### License:
 
 The MIT License (MIT)
