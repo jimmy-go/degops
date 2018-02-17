@@ -1,6 +1,6 @@
 
 help:
-	@echo "Go CI 0.0.2:"
+	@echo "Go CI 0.0.3:"
 	@echo "Available commands:"
 	@echo "\tmake install			Install dependencies."
 	@echo "\tmake run			Run default command."

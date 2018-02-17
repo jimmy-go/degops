@@ -12,10 +12,19 @@
 _update.sh is the secret for all of this_
 
 ```
-update.sh all
-update.sh scripts
-update.sh makefile
-update.sh container
+update.sh all           # Exec all options.
+
+update.sh update        # Update update.sh itself.
+update.sh scripts       # Update scripts directory.
+update.sh makefile      # Overwrite Makefile.
+update.sh container     # Overwrite Dockerfile.
+update.sh travis        # Overwrite .travis.yml file.
+```
+
+### Oneliner copy & exec:
+
+```
+curl -o update.sh https://raw.githubusercontent.com/jimmy-go/degops/master/update.sh | chmod +x update.sh | ./update.sh all
 ```
 
 ### License:

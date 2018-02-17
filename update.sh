@@ -1,5 +1,5 @@
 #!/bin/bash
-## DeGOps: 0.0.2
+## DeGOps: 0.0.3
 # Updates DeGOps files on current dir.
 set -o errexit
 set -o nounset
