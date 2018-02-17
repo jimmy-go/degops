@@ -3,4 +3,4 @@
 set -o errexit
 set -o nounset
 
-go test -v -race -cover
+go test -v -race -cover ./...
