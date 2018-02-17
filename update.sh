@@ -1,5 +1,5 @@
 #!/bin/bash
-## DeGOps: 0.0.1
+## DeGOps: 0.0.2
 # Updates DeGOps files on current dir.
 set -o errexit
 set -o nounset
@@ -14,6 +14,10 @@ getdocker() {
 	curl -o Dockerfile https://raw.githubusercontent.com/jimmy-go/degops/develop/Dockerfile
 }
 
+getupdate() {
+	curl -o update.sh https://raw.githubusercontent.com/jimmy-go/degops/develop/update.sh
+}
+
 getscript() {
 	FILE=$1
 
@@ -26,6 +30,7 @@ getscript() {
 
 	# Load remote file.
 	curl -o scripts/${FILE}.sh https://raw.githubusercontent.com/jimmy-go/degops/develop/scripts/${FILE}.sh
+    chmod +x scripts/${FILE}.sh
 }
 
 copyscripts() {
@@ -37,8 +42,7 @@ copyscripts() {
 	getscript "clean"
 }
 
-ACTION=$1
-case "$ACTION" in
+case "$1" in
 	all)
 		getmake
 		copyscripts
@@ -53,8 +57,11 @@ case "$ACTION" in
 	container)
 		getdocker
 		;;
+	update)
+		getupdate
+		;;
 	*)
-		echo $"Usage: $0 {all|scripts|makefile|container}"
+		echo $"Usage: $0 {all|scripts|makefile|container|update}"
 		exit 1
 esac
 
