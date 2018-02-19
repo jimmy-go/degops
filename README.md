@@ -6,6 +6,27 @@
 [![GoDoc](http://godoc.org/github.com/jimmy-go/degops?status.png)](http://godoc.org/github.com/jimmy-go/degops)
 [![Coverage Status](https://coveralls.io/repos/github/jimmy-go/degops/badge.svg?branch=master)](https://coveralls.io/github/jimmy-go/degops?branch=master)
 
+
+### Usage:
+
+_update.sh is the secret for all of this_
+
+```
+update.sh all           # Exec all options.
+
+update.sh update        # Update update.sh itself.
+update.sh scripts       # Update scripts directory.
+update.sh makefile      # Overwrite Makefile.
+update.sh container     # Overwrite Dockerfile.
+update.sh travis        # Overwrite .travis.yml file.
+```
+
+### Oneliner copy & exec:
+
+```
+curl -o update.sh https://raw.githubusercontent.com/jimmy-go/degops/master/update.sh && chmod +x update.sh && ./update.sh all
+```
+
 ### License:
 
 The MIT License (MIT)
